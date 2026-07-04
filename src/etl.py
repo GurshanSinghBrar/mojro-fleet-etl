@@ -75,7 +75,7 @@ def clean(conn):
 
     raw_count = conn.execute("SELECT COUNT(*) FROM raw_telemetry").fetchone()[0]
 
-    # keep first occurrence of each event_id, drop nulls and negative speeds
+    # keep first occurrence of each event_id, drop nulls, negative speeds, and orphan vehicles
     conn.execute("""
         CREATE OR REPLACE TABLE clean_telemetry AS
         WITH deduped AS (
@@ -87,6 +87,7 @@ def clean(conn):
               AND latitude        IS NOT NULL
               AND longitude       IS NOT NULL
               AND speed_kmph      >= 0
+              AND vehicle_id IN (SELECT vehicle_id FROM raw_vehicles)
         )
         SELECT event_id, vehicle_id, driver_id, trip_id,
                event_timestamp, latitude, longitude,
@@ -103,10 +104,16 @@ def clean(conn):
         WHERE vehicle_id IS NULL OR event_timestamp IS NULL
            OR latitude IS NULL OR longitude IS NULL
     """).fetchone()[0]
-    dup_count = max(raw_count - neg_speed - null_rows - clean_count, 0)
+    orphan_rows = conn.execute("""
+        SELECT COUNT(*) FROM raw_telemetry
+        WHERE vehicle_id IS NOT NULL
+          AND vehicle_id NOT IN (SELECT vehicle_id FROM raw_vehicles)
+    """).fetchone()[0]
+    dup_count = max(raw_count - neg_speed - null_rows - orphan_rows - clean_count, 0)
 
     log_dq('telemetry_events.parquet', 'CLEAN - null fields',      raw_count, null_rows,  'null vehicle/timestamp/GPS')
     log_dq('telemetry_events.parquet', 'CLEAN - negative speed',   raw_count, neg_speed,  'negative speed_kmph')
+    log_dq('telemetry_events.parquet', 'CLEAN - orphan vehicles',  raw_count, orphan_rows, 'vehicle not in vehicles.csv')
     log_dq('telemetry_events.parquet', 'CLEAN - duplicate event_id', raw_count, dup_count, 'kept first by timestamp')
     log.info(f"  telemetry: {clean_count:,} rows kept, {raw_count - clean_count:,} rejected")
 
