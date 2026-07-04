@@ -1,0 +1,21 @@
+customer_id,customer_name,city,industry
+CUST_0001,Customer_1 Logistics Pvt Ltd,Delhi,E-commerce
+CUST_0002,Customer_2 Logistics Pvt Ltd,Hyderabad,FMCG
+CUST_0003,Customer_3 Logistics Pvt Ltd,Chennai,FMCG
+CUST_0004,Customer_4 Logistics Pvt Ltd,Delhi,Logistics
+CUST_0005,Customer_5 Logistics Pvt Ltd,Jaipur,E-commerce
+CUST_0006,Customer_6 Logistics Pvt Ltd,Lucknow,Manufacturing
+CUST_0007,Customer_7 Logistics Pvt Ltd,Mumbai,E-commerce
+CUST_0008,Customer_8 Logistics Pvt Ltd,Delhi,FMCG
+CUST_0009,Customer_9 Logistics Pvt Ltd,Chennai,Retail
+CUST_0010,Customer_10 Logistics Pvt Ltd,Lucknow,E-commerce
+CUST_0011,Customer_11 Logistics Pvt Ltd,Jaipur,FMCG
+CUST_0012,Customer_12 Logistics Pvt Ltd,Jaipur,Manufacturing
+CUST_0013,Customer_13 Logistics Pvt Ltd,Chennai,Manufacturing
+CUST_0014,Customer_14 Logistics Pvt Ltd,Lucknow,Pharma
+CUST_0015,Customer_15 Logistics Pvt Ltd,Mumbai,Food & Beverage
+CUST_0016,Customer_16 Logistics Pvt Ltd,Bangalore,Logistics
+CUST_0017,Customer_17 Logistics Pvt Ltd,Ahmedabad,Pharma
+CUST_0018,Customer_18 Logistics Pvt Ltd,Hyderabad,FMCG
+CUST_0019,Customer_19 Logistics Pvt Ltd,Chennai,Food & Beverage
+CUST_0020,Customer_20 Logistics Pvt Ltd,Pune,E-commerce

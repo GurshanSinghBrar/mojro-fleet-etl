@@ -1,0 +1,9 @@
+date_id,full_date,year,month,month_name,day,day_of_week,day_name,week_number,quarter
+20250120,2025-01-20,2025,1,January,20,0,Monday,4,1
+20250121,2025-01-21,2025,1,January,21,1,Tuesday,4,1
+20250122,2025-01-22,2025,1,January,22,2,Wednesday,4,1
+20250123,2025-01-23,2025,1,January,23,3,Thursday,4,1
+20250124,2025-01-24,2025,1,January,24,4,Friday,4,1
+20250125,2025-01-25,2025,1,January,25,5,Saturday,4,1
+20250126,2025-01-26,2025,1,January,26,-1,Sunday,4,1
+20250127,2025-01-27,2025,1,January,27,0,Monday,5,1

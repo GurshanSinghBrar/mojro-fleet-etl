@@ -10,12 +10,8 @@ venv/
 technical_decision_faq.*
 brief_document.*
 
-# Data files (too large for GitHub)
+# Keep the source data out of git
 DE_Assignment_Data/
-output/
-
-# Keep the database file out of git if large
-database/
 
 # OS
 .DS_Store
