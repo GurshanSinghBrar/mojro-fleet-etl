@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Interview prep — keep this local, don't push to GitHub
+technical_decision_faq.*
+
+# Data files (too large for GitHub)
+DE_Assignment_Data/
+output/
+
+# Keep the database file out of git if large
+# database/
+
+# OS
+.DS_Store
+Thumbs.db
