@@ -6,8 +6,9 @@ __pycache__/
 venv/
 .venv/
 
-# Interview prep — keep this local, don't push to GitHub
+# Separate deliverables — keep local, don't push to GitHub
 technical_decision_faq.*
+brief_document.*
 
 # Data files (too large for GitHub)
 DE_Assignment_Data/
