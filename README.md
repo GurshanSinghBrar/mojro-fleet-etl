@@ -1,4 +1,4 @@
-# Mojro ExecuteWyse — Fleet Analytics ETL Pipeline
+# Mojro ExecuteWyse - Fleet Analytics ETL Pipeline
 
 ETL pipeline that processes raw fleet telemetry, detects anomalies, and builds a dimensional model ready for Power BI dashboards.
 
@@ -47,9 +47,9 @@ That's it. The script runs in about 5 seconds and you'll see progress logs in th
 
 Once the pipeline finishes, two things get created:
 
-**`database/mojro_fleet.sqlite`** — the main database file with all dimension and fact tables.
+**`database/mojro_fleet.sqlite`** - the main database file with all dimension and fact tables.
 
-**`output/`** — the same tables exported as CSVs. Use these to import into Power BI directly (Get Data → Text/CSV).
+**`output/`** - the same tables exported as CSVs. Use these to import into Power BI directly (Get Data → Text/CSV).
 
 ---
 
