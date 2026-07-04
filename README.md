@@ -9,7 +9,7 @@ ETL pipeline that processes raw fleet telemetry, detects anomalies, and builds a
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/<your-github-username>/mojro-fleet-etl.git
+git clone <url>
 cd mojro-fleet-etl
 ```
 

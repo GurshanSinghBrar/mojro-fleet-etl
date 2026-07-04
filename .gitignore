@@ -15,7 +15,7 @@ DE_Assignment_Data/
 output/
 
 # Keep the database file out of git if large
-# database/
+database/
 
 # OS
 .DS_Store
